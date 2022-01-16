@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  background: #fc8;
+  font-size: 16px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.starting-point {
+  padding: 12px;
+  min-height: 48px;
+  background: #888;
+}
+
+.starting-point > .child {
+  padding: 24px;
+  text-align: center;
+  background: #39d;
+  color: black;
+  font-weight: bold;
+  flex: 1;
+}
+
+.starting-point > .child:not(:last-child) {
+  margin-right: 12px;
+}
+
+hr {
+  margin: 24px 0;
+  border: 1px dashed grey;
+}
+
+.instructions {
+  font-size: 14px;
+  text-align: left;
+  padding: 0;
+  margin: 24px auto;
+  background: #bbb;
+  border: 1px solid grey;
+  box-shadow: 0 4px 4px -3px #000;
+}
+
+.instructions h3 {
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  border-bottom: 2px solid black;
+  box-shadow: 0 3px 6px -3px #555;
+  background: #ddd;
+}
+
+.instructions ul {
+  list-style: square;
+  padding: 8px 8px 8px 32px;
+  margin: 0;
+}
+
+.instructions li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.instructions code {
+  background: #555;
+  color: #eee;
+  padding: 4px 8px;
+  margin: 0 4px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Fira Mono', monospace;
+  display: inline-block;
+  box-shadow: 0 2px 4px -3px #000;
+  border: 1px solid #f00;
+}
+
+.instructions a {
+  background: #222;
+  color: #f00;
+  padding: 4px 8px;
+  margin: 0 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Fira Mono', monospace;
+  display: inline-block;
+  box-shadow: 0 2px 4px -3px #000;
+  border: 1px solid #f00;
+  text-transform: uppercase;
+}
+
+/* Problem 1 */
+
+#remove-me {
+  text-align: center;
+  line-height: 36px;
+}
+
+/* Problem 2 */
+
+#remove-my-children {
+  display: flex;
+}
+
+/* Problem 3 */
+
+#remove-my-children-then-me {
+  display: flex;
+}
+
+/* Problem 4 */
+
+#add-children {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+}
+
+/* Problem 5 */
+
+#to-the-back {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+}
+
+#to-the-back > .child {
+  margin-bottom: 12px;
+}
+
+/* Problem 6 */
+#increment-child {
+  display: flex;
+}
+
+/* Problem 7 */
+#increment-decrement {
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Problem 8 */
+
+#echo-user-input form {
+  display: flex;
+  align-items: center;
+}
+
+#echo-user-input input {
+  flex: 1;
+  padding: 4px 12px;
+  margin-left: 12px;
+  font-size: 16px;
+  border: 0;
+}
+
+/* Problem 9 */
+
+#paste-in-reverse {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: initial;
+}
+
+#paste-in-reverse h5 {
+  margin: 0;
+}
+
+#paste-in-reverse input {
+  flex: 1;
+  margin-left: 12px;
+  padding: 4px 12px;
+  font-size: 16px;
+  border: 0;
+}
+
+/* Problem 10 */
+
+#toggle-checkbox form {
+  display: flex;
+  align-items: center;
+}
+
+#toggle-checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+#toggle-checkbox input {
+  margin-right: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+#toggle-checkbox .target-element {
+  padding: 12px;
+}
+
+/* Problem 11 */
+
+#prevent-submit form {
+  display: flex;
+  flex-direction: row;
+  width: 480px;
+  align-items: flex-end;
+}
+
+#prevent-submit form input,
+#prevent-submit form button {
+  padding: 4px;
+  font-size: 16px;
+  border: none;
+}
+
+#prevent-submit form label {
+  margin-right: 12px;
+}
+
+/* Problem 12 */
+
+#mouse-follower {
+  background: #eee;
+  position: relative;
+  height: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mouse {
+  width: 32px;
+  height: 32px;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  position: absolute;
+}

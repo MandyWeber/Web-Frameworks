@@ -1,0 +1,212 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- for problem 1 -->
+    <div class="instructions">
+      <h3>Problem 1</h3>
+      <ul>
+        <li>Listener attaches to: <code>#remove-me</code></li>
+        <li>Remove <code>#remove-me</code> when it is clicked</li>
+      </ul>
+    </div>
+    <div class="starting-point clickable" id="remove-me" onclick="problemOne()">
+      Click to remove me!
+    </div>
+    <hr />
+    <!-- for problem 2 -->
+    <div class="instructions">
+      <h3>Problem 2</h3>
+      <ul>
+        <li>Listener attaches to: <code>#remove-my-children</code></li>
+        <li>Remove <code>.child</code> divs when then are clicked</li>
+        <li>Do not remove <code>#remove-my-children</code> when it is clicked</li>
+      </ul>
+    </div>
+    <div class="starting-point" id="remove-my-children">
+      <div class="child clickable" onclick="problemTwo()">Click to remove me</div>
+      <div class="child clickable" onclick="problemTwo()">Click to remove me</div>
+      <div class="child clickable" onclick="problemTwo()">Click to remove me</div>
+      <div class="child clickable" onclick="problemTwo()">Click to remove me</div>
+    </div>
+    <hr />
+    <!-- for problem 3 -->
+    <div class="instructions">
+      <h3>Problem 3</h3>
+      <ul>
+        <li>Listener attaches to: <code>#remove-my-children-then-me</code></li>
+        <li>Remove <code>.child</code> divs when then are clicked</li>
+        <li>Remove <code>#remove-my-children-then-me</code> when there are no more <code>.child</code> divs left inside of it</li>
+      </ul>
+    </div>
+    <div class="starting-point" id="remove-my-children-then-me">
+      <div class="child clickable"onclick="problemThree()">Click to remove me</div>
+      <div class="child clickable"onclick="problemThree()">Click to remove me</div>
+      <div class="child clickable"onclick="problemThree()">Click to remove me</div>
+    </div>
+    <hr />
+    <!-- for problem 4 -->
+    <div class="instructions">
+      <h3>Problem 4</h3>
+      <ul>
+        <li>Listener attaches to: <code>#add-children</code></li>
+        <li>When <code>#add-children</code> is clicked, create a new <code>&lt;div&gt;</code> with some text, and append it to <code>#add-children</code></li>
+        <li>The new <code>&lt;div&gt;</code> should have a class of <code>"child"</code></li>
+      </ul>
+    </div>
+    <div class="starting-point clickable" id="add-children">
+      <div id="mydiv" onClick="problemFour(' This text was added to the DIV.')" style="font:20px bold; cursor:hand">#add-children</div>
+    </div>
+    <hr />
+    <!-- for problem 5 -->
+    <div class="instructions">
+      <h3>Problem 5</h3>
+      <ul>
+        <li>Listener attaches to: <code>#to-the-back</code></li>
+        <li>When a <code>.child</code> is clicked, move it to end end of <code>#to-the-back</code></li>
+        <li><strong>Hint:</strong> if you append a node already in the DOM, it will move to its new location</li>
+      </ul>
+    </div>
+    <div class="starting-point" id="to-the-back">
+      <div class="child clickable">First</div>
+      <div class="child clickable">Second</div>
+      <div class="child clickable">Third</div>
+      <div class="child clickable">Fourth</div>
+      <div class="child clickable">Fifth</div>
+    </div>
+    <hr />
+    <!-- for problem 6 -->
+    <div class="instructions">
+      <h3>Problem 6</h3>
+      <ul>
+        <li>Listener attaches to: <code>#increment-child</code></li>
+        <li>When a <code>.child</code> is clicked, add 1 to its current value</li>
+      </ul>
+    </div>
+    <div class="starting-point" id="increment-child">
+      <div class="child clickable">0</div>
+      <div class="child clickable">0</div>
+      <div class="child clickable">0</div>
+      <div class="child clickable">0</div>
+      <div class="child clickable">0</div>
+    </div>
+    <hr />
+    <!-- for problem 7 -->
+    <div class="instructions">
+      <h3>Problem 7</h3>
+      <ul>
+        <li>Listener attaches to: <code>#increment-decrement</code></li>
+        <li>When it is clicked <strong>without</strong> the shift key pressed, add 1 to its value</li>
+        <li>When it is clicked <strong>with</strong> the shift key pressed, subtract 1 from its value</li>
+      </ul>
+    </div>
+    <div class="starting-point clickable" id="increment-decrement">
+      0
+    </div>
+    <hr />
+    <!-- for problem 8 -->
+    <div class="instructions">
+      <h3>Problem 8</h3>
+      <ul>
+        <li>Listener attaches to: the <code>input</code> tag inside of <code>#echo-user-input</code></li>
+        <li>When the user has caused a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event" target="_blank">keyup event</a> to occur, echo the value of the input to <code>.user-input-copy</code></li>
+      </ul>
+    </div>
+    <div class="starting-point" id="echo-user-input">
+      <form>
+        <label class="clickable" for="type-place">Type:</label>
+        <input id="type-place" class="user-input" type="text" placeholder="type here" />
+      </form>
+      <div>
+        <span>User has typed:</span>
+        <span class="user-input-copy"></span>
+      </div>
+    </div>
+    <hr />
+    <!-- for problem 9 -->
+    <div class="instructions">
+      <h3>Problem 9</h3>
+      <ul>
+        <li>Listener attaches to: the <code>input</code> tag inside of <code>#paste-in-reverse</code></li>
+        <li>When the user has caused a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event" target="_blank">paste event</a> to occur, prevent the default behavior, and instead set the <code>input</code> value to the reverse of the string.</li>
+        <li><strong>Hint:</strong> You'll have to update the <code>event.target.value</code> with the clipboard data.  The link above has some code to get you started.</li>
+        <li><strong>Hint:</strong> You can't directly reverse a string, but you can reverse an array with <code>arr.reverse()</code></li>
+      </ul>
+    </div>
+    <div class="starting-point" id="paste-in-reverse">
+      <h5>Copy some text below</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, est! Deserunt aspernatur maxime cupiditate, distinctio labore voluptatibus. Quae minus similique aut corrupti praesentium non esse sunt, ducimus excepturi voluptatibus ab.</p>
+      <form>
+        <label class="clickable" for="paste-place">
+          Paste Text Here:
+        </label>
+        <input id="paste-place" class="user-input" type="text" placeholder="paste away" />
+      </form>
+    </div>
+    <hr />
+    <!-- for problem 10 -->
+    <div class="instructions">
+      <h3>Problem 10</h3>
+      <ul>
+        <li>Listener attaches to: the <code>input[type=checkbox]</code> element inside of <code>#toggle-checkbox</code></li>
+        <li>When the user has caused a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event">change event</a> to occur, toggle the <code>hidden</code> class on the <code>.target-element</code></li>
+      </ul>
+    </div>
+    <div class="starting-point" id="toggle-checkbox">
+      <form>
+        <label class="clickable" for="show-hide">
+          <input id="show-hide" class="clickable" type="checkbox" checked />
+          <span>Show Element</span>
+        </label>
+      </form>
+      <div class="child target-element">
+        I may not be visible?
+      </div>
+    </div>
+    <hr />
+    <!-- for problem 11 -->
+    <div class="instructions">
+      <h3>Problem 11</h3>
+      <ul>
+        <li>Listener attaches to: the <code>form</code> element inside of <code>#prevent-submit</code></li>
+        <li>When the user has caused a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event" target="_blank">submit event</a> to occur, prevent the default behavior</li>
+        <li>
+          After preventing the default behavior, read the data <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement#Accessing_the_forms_elements" target="_blank">from the form</a>,
+          and add the values in the two <code>span</code> elements below it.
+        </li>
+      </ul>
+    </div>
+    <div class="starting-point" id="prevent-submit">
+      <h2>Please sign in to use our services</h2>
+      <form action="/dont_go_here">
+        <label>
+          <div>Email</div>
+          <input type="email" placeholder="email@foo.bar" name="user[email]">
+        </label>
+        <label>
+          <div>Password</div>
+          <input type="password" placeholder="password" name="user[password]">
+        </label>
+        <button type="submit">Log In</button>
+      </form>
+      <div>
+        <span class="user-email">Email:</span><br />
+        <span class="user-password">Password: </span>
+      </div>
+    </div>
+    <!-- for problem 12 -->
+    <div class="instructions">
+      <h3>Problem 12</h3>
+      <ul>
+        <li>Create an HTML form with three fields, name, address, and phone number.</li>
+        <li>Append your form to the target div</li>
+        <li>Write your javascript to react to a form submission by alerting the values in each field and clearing the
+          fields WITHOUT refreshing the page.</li>
+      </ul>
+    </div>
+    <div class="starting-point" id="target-for-form-template"></div>
+  </body>
+</html>

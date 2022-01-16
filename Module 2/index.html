@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Module 2 Note Taker Course Project</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link  href="style.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+
+	</head>
+	<body>
+		<div id="page" data-role="page" data-theme="b" data-add-back-btn="true">
+			<div data-role="header" data-theme="b">
+		<div class="app">
+			<h1 class="app-title">Note Taker</h1>
+			<div class="topnav">
+			  <a class="active">Notes</a>
+			  <a class="active">To Do</a>
+			  <a class="active">Garbage</a>
+			  <a class="active">Saved</a>
+			</div>
+
+				<input type="text" placeholder="Create Note or List">
+					<button type="submit">Create</button>
+
+
+			<main>
+						<div class="note-card" >
+						<h3 class="note-title">Note</h3>
+						<nav class="note-nav">
+							<button class="note-pinned" data-inline="true">Pin</button>
+							<button class="note-delete">Delete</button>
+						</nav>
+					</div>
+					<div class="note-card">
+						<h3 class="note-title">To Do List</h3>
+						<nav class="note-nav">
+							<button class="button">Pin</button>
+							<button class="note-delete">Delete</button>
+						</nav>
+					</div>
+
+					<input type="text" placeholder="Search">
+						<button type="button">Search</button>
+
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

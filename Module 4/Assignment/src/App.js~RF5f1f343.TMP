@@ -1,0 +1,27 @@
+import './App.css';
+
+import Todos from './components/Todos'
+
+function App() {
+
+  const todos = [
+    { name: 'Learn react', done: false },
+    { name: 'Finish homework', done: false },
+    { name: 'Feed Cats', done: false },
+  ]
+
+  return (
+    <div className="App">
+      <header>
+        <h1>Note Taker</h1>
+      </header>
+      <form>
+        <input className="shadow border-inline" type="text" placeholder="Note" />
+        <button className="shadow border-inline" type="submit">Add</button>
+      </form>
+      <Todos list={todos} />
+    </div>
+  );
+}
+
+export default App;
